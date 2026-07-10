@@ -44,17 +44,14 @@
   .btn-line:hover{background:var(--brown);color:var(--cream)}
 
   /* ---------- Hero ---------- */
-  .hero{padding:72px 0 72px;text-align:center;position:relative}
+  .hero{padding:72px 0 20px;text-align:center;position:relative}
   .est{display:flex;align-items:center;justify-content:center;gap:18px;color:var(--gold-ink);margin-bottom:26px}
   .est::before,.est::after{content:"";width:56px;height:1px;background:var(--gold)}
   .est span{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase}
   .hero h1{font-size:clamp(48px,7vw,92px);font-weight:700}
   .hero h1 .it{font-style:italic;color:var(--red)}
   .hero .tag{margin:20px auto 32px;color:var(--muted);font-size:19px;font-style:italic;max-width:50ch}
-  .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
-  .hero-frame{position:relative;max-width:680px;margin:0 auto;padding:14px;background:var(--paper);border:1px solid var(--line);box-shadow:0 24px 60px -30px rgba(46,33,26,.45)}
-  .hero-frame::before{content:"";position:absolute;inset:6px;border:1px solid var(--line);pointer-events:none}
-  .hero-frame img{aspect-ratio:3/2;object-fit:cover;object-position:center 46%;width:100%;height:auto}
+  .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
   section{padding:88px 0}
   .sec-head{text-align:center;margin-bottom:56px}
@@ -88,7 +85,6 @@
   .gal figcaption{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-align:center;margin-top:12px;color:var(--muted)}
 
   /* ---------- Testimonials ---------- */
-  .quotes{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;max-width:1020px;margin:0 auto;text-align:center}
   .quote-grid blockquote{position:relative;padding-top:30px}
   .quote-grid blockquote::before{content:"”";position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-family:'Playfair Display',Georgia,serif;font-size:64px;line-height:1;color:var(--red)}
@@ -130,6 +126,7 @@
   .about-grid h2{font-size:clamp(32px,4vw,48px);font-weight:700;margin-bottom:18px}
   .about-grid h2 .it{font-style:italic;color:var(--red)}
   .about-grid p{color:var(--muted)}
+  .about-grid .sign{margin-top:18px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--brown-2)}
 
   /* ---------- Contact ---------- */
   .contact{background:var(--paper);border-top:1px solid var(--line)}
@@ -204,8 +201,8 @@
     </a>
     <nav aria-label="Huvudmeny">
       <ul class="nav-links">
-        <li><a href="#tjanster">Tjänster</a></li>
         <li><a href="#galleri">Galleri</a></li>
+        <li><a href="#tjanster">Tjänster</a></li>
         <li><a href="#butik">Butik</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
@@ -219,8 +216,8 @@
   </div>
   <nav class="mobile-menu" id="mobilmeny" aria-label="Mobilmeny">
     <ul>
-      <li><a href="#tjanster">Tjänster</a></li>
       <li><a href="#galleri">Galleri</a></li>
+      <li><a href="#tjanster">Tjänster</a></li>
       <li><a href="#butik">Butik</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
       <li><a href="#boka">Boka tid</a></li>
@@ -239,11 +236,31 @@
         <a class="btn btn-red" href="#boka">Boka tid</a>
         <a class="btn btn-line" href="#tjanster">Se prislistan</a>
       </div>
-      <div class="hero-frame">
-        <img src="assets/cut-2.jpg" alt="Hög fade med fullskägg framför salongens skyltfönster" width="682" height="455">
-      </div>
     </div>
   </div>
+
+  <!-- GALLERY -->
+  <section id="galleri">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="caps">Galleri</span>
+        <h2 class="pf">Ur stolen</h2>
+        <div class="rule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5c2 1.5 9 7 16 12M4 19C6 17.5 13 12 20 7"/><circle cx="5" cy="6" r="2.4"/><circle cx="5" cy="18" r="2.4"/></svg></div>
+      </div>
+      <div class="gal">
+        <figure><img src="https://static.wixstatic.com/media/68b77e_4392eda6fe814d2aa0f2ae86eebf78d6~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-1.jpg'" alt="Skin fade med skägg" loading="lazy"><figcaption>Skin fade</figcaption></figure>
+        <figure><img src="https://static.wixstatic.com/media/68b77e_b0f33e0892bb48a88f4c221d24dc51c8~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-4.jpg'" alt="Salongen med klassisk barber pole i fönstret" loading="lazy"><figcaption>Salongen</figcaption></figure>
+        <figure><img src="https://static.wixstatic.com/media/68b77e_ac9ec5eee2f54eb091bd8c4c1123d050~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-3.jpg'" alt="Lockig topp med taper fade" loading="lazy"><figcaption>Curly taper</figcaption></figure>
+        <figure><img src="https://static.wixstatic.com/media/68b77e_db50bbd673f443bd9325655878a2869c~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-6.jpg'" alt="Bakåtslickad frisyr med fullskägg" loading="lazy"><figcaption>Klassisk stil</figcaption></figure>
+      </div>
+      <div class="more">
+        <a href="https://www.instagram.com/shakir_cuts/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
+          Fler klippningar — @shakir_cuts
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- SERVICES -->
   <section class="services" id="tjanster">
@@ -277,29 +294,6 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="galleri">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="caps">Galleri</span>
-        <h2 class="pf">Ur stolen</h2>
-        <div class="rule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5c2 1.5 9 7 16 12M4 19C6 17.5 13 12 20 7"/><circle cx="5" cy="6" r="2.4"/><circle cx="5" cy="18" r="2.4"/></svg></div>
-      </div>
-      <div class="gal">
-        <figure><img src="https://static.wixstatic.com/media/68b77e_4392eda6fe814d2aa0f2ae86eebf78d6~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-1.jpg'" alt="Skin fade med skägg" loading="lazy"><figcaption>Skin fade</figcaption></figure>
-        <figure><img src="https://static.wixstatic.com/media/68b77e_b0f33e0892bb48a88f4c221d24dc51c8~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-4.jpg'" alt="Salongen med klassisk barber pole i fönstret" loading="lazy"><figcaption>Salongen</figcaption></figure>
-        <figure><img src="https://static.wixstatic.com/media/68b77e_ac9ec5eee2f54eb091bd8c4c1123d050~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-3.jpg'" alt="Lockig topp med taper fade" loading="lazy"><figcaption>Curly taper</figcaption></figure>
-        <figure><img src="https://static.wixstatic.com/media/68b77e_db50bbd673f443bd9325655878a2869c~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-6.jpg'" alt="Bakåtslickad frisyr med fullskägg" loading="lazy"><figcaption>Klassisk stil</figcaption></figure>
-      </div>
-      <div class="more">
-        <a href="https://www.instagram.com/shakir_cuts/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
-          Fler klippningar — @shakir_cuts
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- TESTIMONIALS — riktiga Google-recensioner, ordagrant citerade -->
   <section class="quotes" id="omdomen">
     <div class="wrap">
@@ -323,8 +317,8 @@
         </blockquote>
         <blockquote>
           <div class="stars" aria-label="5 av 5 stjärnor"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></div>
-          <p>Har klippt mig hos Adam och nu Mustafa senaste tillfällen. Båda är kvalitativa och mycket duktiga frisörer. Inga tråkiga frisörer som bara gör sitt jobb utan bjuder även på mycket skratt och bra konversationer.</p>
-          <cite>— Nooruddin</cite>
+          <p>Fick exakt det jag önska mig. Trevlig personal och lätt att handskas med. Bra placering och bra barberar miljö.</p>
+          <cite>— Elias</cite>
         </blockquote>
         <blockquote>
           <div class="stars" aria-label="5 av 5 stjärnor"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></div>
@@ -370,9 +364,10 @@
       <figure><img src="https://static.wixstatic.com/media/68b77e_c663fee025704359a6295e8f8cb22cea~mv2.jpg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-5.jpg'" alt="Barberaren i arbete framför salongens klassiska speglar" loading="lazy"></figure>
       <div>
         <span class="caps">Mannen bakom namnet</span>
-        <h2 class="pf">Familjen målar. <span class="it">Shakir klipper.</span></h2>
-        <p>Shakir kommer från en familj full av konstnärer — själv fann han sin konst i håret. Han började klippa vid sexton, mitt i fadens genombrott, och tog över en salong på Sankt Larsgatan som klippt stan sedan 1932: snickarbyggd för hantverket, uppdaterad med en modern touch. Tio år senare är standarden densamma. Eller som han själv säger: varje kund är en omålad tavla.</p>
-        <p style="margin-top:14px">Du hittar oss på Sankt Larsgatan 34, mitt i Linköping.</p>
+        <h2 class="pf">Du ser en klippning. Jag ser en <span class="it">tavla.</span></h2>
+        <p>I min familj målar och ritar alla — själv fann jag min konst i håret. Jag började klippa som sextonåring, mitt i fadens genombrott, och kravet jag ställde på mig själv då har jag aldrig prutat på: varje linje ska vara exakt, varje detalj genomtänkt, och du reser dig inte ur stolen förrän det är perfekt. Sedan 2020 driver jag ShakirCutS i en salong som klippt Linköping sedan 1932 — så när du sätter dig här, sitter du i över nittio år av hantverk. Och jag har inte tänkt sänka ribban.</p>
+        <p style="margin-top:14px">Du hittar mig på Sankt Larsgatan 34, mitt i Linköping.</p>
+        <p class="sign">— Adam, ShakirCutS</p>
       </div>
     </div>
   </section>
