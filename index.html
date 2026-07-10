@@ -10,8 +10,8 @@
 <style>
   :root{
     --cream:#F4EDDF; --cream-2:#EDE3CE; --paper:#FBF7EE;
-    --brown:#2E211A; --brown-2:#4A3729; --muted:#7A6A58;
-    --red:#93312B; --gold:#A8802F; --line:#D9CCB2;
+    --brown:#2E211A; --brown-2:#4A3729; --muted:#6B5B49;
+    --red:#93312B; --gold:#A8802F; --gold-ink:#8F6C24; --gold-bright:#C29B4B; --line:#D9CCB2;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -44,14 +44,14 @@
   .btn-line:hover{background:var(--brown);color:var(--cream)}
 
   /* ---------- Hero ---------- */
-  .hero{padding:88px 0 80px;text-align:center;position:relative}
-  .est{display:flex;align-items:center;justify-content:center;gap:18px;color:var(--gold);margin-bottom:26px}
+  .hero{padding:72px 0 72px;text-align:center;position:relative}
+  .est{display:flex;align-items:center;justify-content:center;gap:18px;color:var(--gold-ink);margin-bottom:26px}
   .est::before,.est::after{content:"";width:56px;height:1px;background:var(--gold)}
   .est span{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase}
   .hero h1{font-size:clamp(48px,7vw,92px);font-weight:700}
   .hero h1 .it{font-style:italic;color:var(--red)}
-  .hero .tag{margin:22px auto 40px;color:var(--muted);font-size:19px;font-style:italic;max-width:50ch}
-  .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:64px}
+  .hero .tag{margin:20px auto 32px;color:var(--muted);font-size:19px;font-style:italic;max-width:50ch}
+  .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
   .hero-frame{position:relative;max-width:920px;margin:0 auto;padding:14px;background:var(--paper);border:1px solid var(--line);box-shadow:0 24px 60px -30px rgba(46,33,26,.45)}
   .hero-frame::before{content:"";position:absolute;inset:6px;border:1px solid var(--line);pointer-events:none}
   .hero-frame img{aspect-ratio:16/9;object-fit:cover;object-position:center 30%;width:100%}
@@ -76,20 +76,34 @@
   .menu-item .desc{color:var(--muted);font-size:15.5px;font-style:italic}
   .menu-item .meta a{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brown);border-bottom:1.5px solid var(--gold);padding-bottom:3px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
   .menu-item .meta a:hover{color:var(--red)}
+  .pop{font-family:'Oswald',sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--brown);padding:4px 9px;white-space:nowrap;align-self:center;transform:translateY(-3px)}
   .menu-inner{display:flex;flex-direction:column;width:100%}
   .menu-line{display:flex;align-items:baseline;gap:14px}
   .svc-cta{text-align:center;margin-top:44px}
 
   /* ---------- Gallery ---------- */
-  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:920px;margin:0 auto}
   .gal figure{background:var(--paper);border:1px solid var(--line);padding:10px 10px 16px;box-shadow:0 14px 34px -22px rgba(46,33,26,.4)}
   .gal img{aspect-ratio:3/4;object-fit:cover;width:100%}
   .gal figcaption{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-align:center;margin-top:12px;color:var(--muted)}
 
+  /* ---------- Testimonials ---------- */
+  .quotes{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;max-width:1020px;margin:0 auto;text-align:center}
+  .quote-grid blockquote{position:relative;padding-top:30px}
+  .quote-grid blockquote::before{content:"”";position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-family:'Playfair Display',Georgia,serif;font-size:64px;line-height:1;color:var(--red)}
+  .stars{display:flex;justify-content:center;gap:4px;margin-bottom:14px;color:var(--gold)}
+  .stars svg{width:15px;height:15px}
+  .quote-grid blockquote p{font-style:italic;color:var(--muted)}
+  .quote-grid cite{display:block;margin-top:14px;font-style:normal;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brown-2)}
+  .quotes .more{text-align:center;margin-top:48px}
+  .quotes .more a{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brown);border-bottom:1.5px solid var(--gold);padding-bottom:3px;min-height:44px;display:inline-flex;align-items:center}
+  .quotes .more a:hover{color:var(--red)}
+
   /* ---------- Products ---------- */
   .shop{background:var(--brown);color:var(--cream)}
   .shop .sec-head h2{color:var(--paper)}
-  .shop .sec-head .caps{color:var(--gold)}
+  .shop .sec-head .caps{color:var(--gold-bright)}
   .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   .prod{background:var(--brown-2);border:1px solid rgba(244,237,223,.14);padding:14px 14px 20px;text-align:center;transition:border-color .2s}
   .prod:hover{border-color:var(--gold)}
@@ -125,7 +139,7 @@
   .final h2 .it{font-style:italic;color:var(--red)}
 
   footer{background:var(--brown);color:rgba(244,237,223,.7);padding:38px 0;text-align:center;font-size:14px}
-  footer .caps{display:block;font-size:12px;color:var(--gold);margin-bottom:8px}
+  footer .caps{display:block;font-size:12px;color:var(--gold-bright);margin-bottom:8px}
 
   /* ---------- Mobile nav (hamburger) ---------- */
   .nav-toggle{display:none;background:none;border:1.5px solid var(--brown);color:var(--brown);min-width:48px;min-height:48px;align-items:center;justify-content:center;cursor:pointer}
@@ -149,6 +163,7 @@
     .prods{grid-template-columns:repeat(2,1fr)}
     .about-grid{grid-template-columns:1fr;gap:40px}
     .contact-cols{grid-template-columns:1fr;gap:36px}
+    .quote-grid{grid-template-columns:1fr;gap:36px;max-width:520px}
   }
   @media (max-width: 700px){
     .boka-bar{display:block}
@@ -158,8 +173,15 @@
   @media (max-width: 600px){
     section{padding:60px 0}
     .hero{padding:60px 0}
-    .gal{grid-template-columns:1fr}
-    .prods{grid-template-columns:1fr}
+    /* gallery becomes a swipeable strip to keep the page short */
+    .gal{display:flex;gap:14px;overflow-x:auto;padding:4px 4px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+    .gal figure{flex:0 0 74%;scroll-snap-align:center}
+    /* shop stays 2×2 instead of one tall column */
+    .prods{grid-template-columns:repeat(2,1fr);gap:14px}
+    .prod{padding:10px 10px 16px}
+    .prod h3{font-size:17px}
+    .prod .now{font-size:17px}
+    .badge{font-size:10px;padding:4px 8px}
     .menu-line{flex-wrap:wrap}
     .menu-item .dots{display:none}
   }
@@ -239,7 +261,7 @@
         </div>
         <div class="menu-item">
           <div class="menu-inner">
-            <div class="menu-line"><h3>Hår &amp; Skägg</h3><span class="dots"></span><span class="price">400 kr</span></div>
+            <div class="menu-line"><h3>Hår &amp; Skägg</h3><span class="pop">Populärast</span><span class="dots"></span><span class="price">400 kr</span></div>
             <div class="meta"><span class="desc">Komplett stil i samma besök · 45 minuter</span><a href="#boka">Boka nu</a></div>
           </div>
         </div>
@@ -258,9 +280,39 @@
       </div>
       <div class="gal">
         <figure><img src="https://static.wixstatic.com/media/68b77e_4392eda6fe814d2aa0f2ae86eebf78d6~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-1.jpg'" alt="Skin fade med skägg" loading="lazy"><figcaption>Skin fade</figcaption></figure>
+        <figure><img src="assets/cut-2.jpg" alt="Hög fade med fullskägg framför salongens fönster" loading="lazy"><figcaption>Fade &amp; skägg</figcaption></figure>
         <figure><img src="https://static.wixstatic.com/media/68b77e_ac9ec5eee2f54eb091bd8c4c1123d050~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-3.jpg'" alt="Lockig topp med taper fade" loading="lazy"><figcaption>Curly taper</figcaption></figure>
         <figure><img src="https://static.wixstatic.com/media/68b77e_db50bbd673f443bd9325655878a2869c~mv2.jpeg/v1/fit/w_1600,h_1200,q_90,enc_jpg/photo.jpg" onerror="this.onerror=null;this.src='assets/cut-6.jpg'" alt="Bakåtslickad frisyr med fullskägg" loading="lazy"><figcaption>Klassisk stil</figcaption></figure>
       </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS — PLACEHOLDER QUOTES: byt mot riktiga Google-recensioner (Adam) -->
+  <section class="quotes" id="omdomen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="caps">Omdömen</span>
+        <h2 class="pf">Vad kunderna säger</h2>
+        <div class="rule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5c2 1.5 9 7 16 12M4 19C6 17.5 13 12 20 7"/><circle cx="5" cy="6" r="2.4"/><circle cx="5" cy="18" r="2.4"/></svg></div>
+      </div>
+      <div class="quote-grid">
+        <blockquote>
+          <div class="stars" aria-label="5 av 5 stjärnor"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></div>
+          <p>Bästa faden i Linköping. Alltid lika noggrann, alltid på tid.</p>
+          <cite>— Ali</cite>
+        </blockquote>
+        <blockquote>
+          <div class="stars" aria-label="5 av 5 stjärnor"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></div>
+          <p>Man går in för en klippning och går ut med nytt självförtroende.</p>
+          <cite>— Marcus</cite>
+        </blockquote>
+        <blockquote>
+          <div class="stars" aria-label="5 av 5 stjärnor"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></div>
+          <p>Enkelt att boka online, schysst stämning och perfekt resultat.</p>
+          <cite>— Jonas</cite>
+        </blockquote>
+      </div>
+      <div class="more"><a href="#">Läs alla recensioner på Google →</a></div>
     </div>
   </section>
 
